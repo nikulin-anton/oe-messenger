@@ -2,12 +2,14 @@ import Avatar from "@/app/components/Avatar/Avatar";
 import { Chat } from "@/app/interfaces/chat";
 import style from "./chat-list-item.module.css";
 
-type Props = {
-  chat: Chat;
-};
+type Props = { chat: Chat };
 
 export default function ChatListItem({ chat }: Props) {
   const fullName = `${chat.interlocutor.firstName} ${chat.interlocutor.lastName}`;
+  const lastMessageTime = chat.lastMessage.dateTime.toLocaleTimeString(
+    "en-us",
+    { hour: "2-digit", minute: "2-digit" }
+  );
 
   return (
     <div className={style.item}>
@@ -17,12 +19,12 @@ export default function ChatListItem({ chat }: Props) {
         width={40}
         height={40}
       />
-      <div className={style.middle}>
-        <p>{fullName}</p>
+      <div className={style.middleBlock}>
+        <p className={style.fullName}>{fullName}</p>
         <p className={style.message}>{chat.lastMessage.value}</p>
       </div>
       <div>
-        <p>{chat.lastMessage.dateTime.toLocaleTimeString()}</p>
+        <p className={style.lastMessageTime}>{lastMessageTime}</p>
         <p>
           {
             <span className={chat.sentMessageRead ? "" : "blue"}>

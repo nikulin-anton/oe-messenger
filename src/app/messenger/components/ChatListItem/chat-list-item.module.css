@@ -5,12 +5,30 @@
   gap: 8px;
 }
 
-.middle {
+.middleBlock {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  gap: 2px;
+}
+
+.fullName {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 .message {
+  font-size: 14px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: var(--text-secondary);
+}
+
+.lastMessageTime {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 16px;
 }
