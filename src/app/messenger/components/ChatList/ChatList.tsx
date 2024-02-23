@@ -3,9 +3,9 @@ import ChatListItem from "../ChatListItem/ChatListItem";
 
 export default async function ChatList() {
   const chatList = await getChats();
-  const items = chatList.map((chat) => (
-    <ChatListItem chat={chat} key={chat.id} />
-  ));
+  const items = chatList
+    .sort((a) => (a.isPinned ? -1 : 1))
+    .map((chat) => <ChatListItem chat={chat} key={chat.id} />);
 
   return (
     <section>

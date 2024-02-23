@@ -1,4 +1,7 @@
 import Avatar from "@/app/components/Avatar/Avatar";
+import Dot from "@/app/components/Dot/Dot";
+import Icon from "@/app/components/Icon/Icon";
+import Label from "@/app/components/Label/Label";
 import { Chat } from "@/app/interfaces/chat";
 import style from "./chat-list-item.module.css";
 
@@ -23,16 +26,19 @@ export default function ChatListItem({ chat }: Props) {
         <p className={style.fullName}>{fullName}</p>
         <p className={style.message}>{chat.lastMessage.value}</p>
       </div>
-      <div>
+      <div className={style.rightBlock}>
         <p className={style.lastMessageTime}>{lastMessageTime}</p>
-        <p>
-          {
-            <span className={chat.sentMessageRead ? "" : "blue"}>
-              {chat.unreadedIncomingMessages || ""}
-            </span>
-          }
-          {chat.isPinned && <span>Pin</span>}
-        </p>
+        <div className={style.rightDownBlock}>
+          {chat.unreadedIncomingMessages > 0 && (
+            <Label status={chat.sentMessageRead ? "secondary" : "primary"}>
+              {chat.unreadedIncomingMessages}
+            </Label>
+          )}
+          {chat.unreadedIncomingMessages === 0 && !chat.sentMessageRead && (
+            <Dot />
+          )}
+          {chat.isPinned && <Icon name="pin" alt="Pinned"></Icon>}
+        </div>
       </div>
     </div>
   );

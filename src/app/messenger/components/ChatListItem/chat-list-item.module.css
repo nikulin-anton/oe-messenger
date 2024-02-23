@@ -1,8 +1,9 @@
 .item {
   display: grid;
-  grid-template-columns: min-content 2fr 1fr;
+  grid-template-columns: min-content 2fr max-content;
   padding: 16px 24px;
   gap: 8px;
+  align-items: center;
 }
 
 .middleBlock {
@@ -27,8 +28,23 @@
   color: var(--text-secondary);
 }
 
+.rightBlock {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+}
+
+.rightDownBlock {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
 .lastMessageTime {
   color: var(--text-secondary);
   font-size: 12px;
   line-height: 16px;
+  text-align: right;
 }

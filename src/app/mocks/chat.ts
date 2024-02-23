@@ -13,6 +13,9 @@ export function getChatMock(chat: Partial<Chat> = {}): Chat {
     },
     isPinned: faker.datatype.boolean(),
     sentMessageRead: faker.datatype.boolean(),
-    unreadedIncomingMessages: faker.number.int({ min: 1, max: 999 }),
+    unreadedIncomingMessages: faker.datatype.boolean()
+      ? faker.number.int({ min: 1, max: 99 })
+      : 0,
+    ...chat,
   };
 }

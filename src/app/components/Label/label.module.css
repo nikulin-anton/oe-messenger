@@ -1,0 +1,11 @@
+.label {
+  border-radius: 15px;
+  color: var(--text-white);
+  background-color: var(--bg-block-3);
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.primary {
+  background-color: var(--system-info);
+}
