@@ -1,13 +1,13 @@
 import Image from "next/image";
 import LogoSvg from "../../assets/icons/logo.svg";
 import { App } from "../../const/app";
-import Styles from "./Logo.module.css";
+import styles from "./logo.module.css";
 
 export default function Logo() {
   return (
-    <div className={Styles.logoContainer}>
+    <div className={styles.logoContainer}>
       <Image src={LogoSvg} alt="Logo" />
-      <span className={Styles.appName}>{App.name}</span>
+      <span className={styles.appName}>{App.name}</span>
     </div>
   );
 }
