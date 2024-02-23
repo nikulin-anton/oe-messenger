@@ -1,0 +1,16 @@
+.item {
+  display: grid;
+  grid-template-columns: min-content 2fr 1fr;
+  padding: 16px 24px;
+  gap: 8px;
+}
+
+.middle {
+  overflow: hidden;
+}
+
+.message {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
