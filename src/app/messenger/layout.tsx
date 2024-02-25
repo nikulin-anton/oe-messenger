@@ -7,11 +7,10 @@ export default function MessengerLayout({ children }: { children: ReactNode }) {
   return (
     <section className={styles.messengerLayout}>
       <Header />
-      <div className={styles.messengerPage}>
+      <div className={styles.messengerPageContainer}>
         <ChatList />
-        <div>Here will be messages</div>
+        {children}
       </div>
-      {children}
     </section>
   );
 }

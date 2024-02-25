@@ -4,9 +4,17 @@
   height: 100%;
 }
 
-.messengerPage {
+.messengerPageContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
   height: 100%;
   overflow: hidden;
+}
+
+.messengerEmptyPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }

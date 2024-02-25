@@ -6,6 +6,7 @@
   --bg-block-3: #8fa0af;
   --system-info: #0086ea;
   --border-primary: #cdd5de;
+  --interactive-gray-hover: #f8f9fa;
 
   --max-width: 1100px;
   --font-family: "Quicksand", sans-serif;
@@ -22,6 +23,7 @@
     --bg-block-primary: #21262b;
     --system-info: #0d6cbd;
     --border-primary: #4a545c;
+    --interactive-gray-hover: #353c43;
   }
 }
 

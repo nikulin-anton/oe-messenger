@@ -1,6 +1,9 @@
-const iconsMap = new Map([["pin", import("../../assets/icons/pin.svg")]]);
+const iconsMap = new Map([
+  ["pin", import("../../assets/icons/pin.svg")],
+  ["chat", import("../../assets/icons/chat.svg")],
+]);
 
-export async function getIconByName(name: string): Promise<string> {
+export function getIconByName(name: string): Promise<string> {
   if (iconsMap.has(name)) {
     return new Promise((resolve, reject) =>
       iconsMap
