@@ -5,7 +5,7 @@ import styles from "./messenger.module.css";
 
 export default function MessengerLayout({ children }: { children: ReactNode }) {
   return (
-    <section>
+    <section className={styles.messengerLayout}>
       <Header />
       <div className={styles.messengerPage}>
         <ChatList />

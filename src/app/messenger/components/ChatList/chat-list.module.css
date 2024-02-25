@@ -1,0 +1,5 @@
+.chatListContainer {
+  border-right: 1px solid var(--border-primary);
+  overflow: scroll;
+  max-height: 100%;
+}

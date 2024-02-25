@@ -4,6 +4,7 @@
   padding: 16px 24px;
   gap: 8px;
   align-items: center;
+  max-height: 100%;
 }
 
 .middleBlock {

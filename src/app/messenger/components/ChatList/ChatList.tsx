@@ -1,5 +1,6 @@
 import { getChats } from "@/app/api/chat";
 import ChatListItem from "../ChatListItem/ChatListItem";
+import style from "./chat-list.module.css";
 
 export default async function ChatList() {
   const chatList = await getChats();
@@ -8,7 +9,7 @@ export default async function ChatList() {
     .map((chat) => <ChatListItem chat={chat} key={chat.id} />);
 
   return (
-    <section>
+    <section className={style.chatListContainer}>
       {/* Search */}
       <div>{items}</div>
     </section>
