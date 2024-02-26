@@ -11,3 +11,13 @@ export function getChats(): Promise<Chat[]> {
     setTimeout(() => resolve(chatsMock), Math.random() * 1000)
   );
 }
+
+export function getChatById(id: string): Promise<Chat> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const chat = chatsMock.find((mock) => mock.id === id);
+
+      chat ? resolve(chat) : reject("Chat is not exists");
+    }, Math.random() * 1000);
+  });
+}
