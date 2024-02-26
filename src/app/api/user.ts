@@ -3,6 +3,6 @@ import { getUserMock } from "../mocks/user";
 
 export function getUser(): Promise<User> {
   return new Promise((resolve) =>
-    setTimeout(() => resolve(getUserMock()), 300)
+    setTimeout(() => resolve(getUserMock()), Math.random() * 100)
   );
 }
